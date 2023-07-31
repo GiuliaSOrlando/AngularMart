@@ -12,10 +12,8 @@ export class ProductService {
 
   constructor(private http: HttpClient) {}
 
-  getProducts(): Observable<HttpResponse<ApiResponse[]>> {
-    return this.http.get<ApiResponse[]>(this.productsUrl, {
-      observe: 'response',
-    });
+  getProducts(): Observable<ApiResponse> {
+    return this.http.get<ApiResponse>(this.productsUrl);
   }
 
   getProduct(id: number): Observable<Product> {

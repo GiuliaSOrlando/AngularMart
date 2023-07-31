@@ -16,12 +16,8 @@ export class SingleProductComponent implements OnInit {
   ngOnInit() {
     this.productService.getProducts().subscribe(
       (response) => {
-        if (response.body) {
-          this.products = response.body;
+          this.products = response.products
           console.log(this.products);
-        } else {
-          console.error('Response body is null.');
-        }
       },
       (error) => {
         console.error('Error fetching products:', error);
