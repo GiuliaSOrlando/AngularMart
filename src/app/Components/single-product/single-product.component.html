@@ -1,9 +1,21 @@
-<div>
-  <h2>Products</h2>
-  <ul>
-    <li *ngFor="let product of products">
-      <p>Id: {{ product.id }}</p>
-      <p>Price: {{ product.price }}</p>
-    </li>
-  </ul>
-</div>
+ <div class="col-md-12">
+        <h2>Products</h2>
+        <ul>
+          <li *ngFor="let product of products" class="list-group-item">
+            <div>
+              <p class="mb-1"><strong>Id:</strong> {{ product.id }}</p>
+              <p class="mb-1"><strong>Price:</strong> ${{ product.price }}</p>
+
+              <p class="mb-1"><strong>Title:</strong> {{ product.title }}</p>
+              <p class="mb-1"><strong>Description:</strong> {{ product.description }}</p>
+              <p class="mb-1"><strong>Discount Percentage:</strong> {{ product.discountPercentage }}%</p>
+              <p class="mb-1"><strong>Rating:</strong> {{ product.rating }}</p>
+              <p class="mb-1"><strong>Stock:</strong> {{ product.stock }}</p>
+              <p class="mb-1"><strong>Brand:</strong> {{ product.brand }}</p>
+              <p class="mb-1"><strong>Category:</strong> {{ product.category }}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
